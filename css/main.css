@@ -1,0 +1,214 @@
+:root {
+    --primary-col: #a8dbcc;
+    --stacks-bg-col: #82bcbd;
+    --general-bg-col: #1a232b;
+    --nav-bg-col: #0b0b0b;
+    --alt-bg-col: #1a1a1a;
+    --gray-col: #617076;
+    --borders-col: #70af87;
+    --text-col: #fff;
+    --nav-margin-offset: calc(2rem + 55px);
+
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-col);
+}
+
+.nav-bar {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    background-color: var(--nav-bg-col);
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+}
+
+.nav__responsive-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: var(--nav-bg-col);
+    z-index: 5000;
+}
+
+.nav__img-container {
+    max-width: 80px;
+    height: 55px;
+}
+
+.nav__img-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* ? BOTON BURGER */
+ .nav-btn {
+    color: var(--text-col);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.nav-btn__burger {
+    width: 1.5rem;
+    height: 3px;
+    background: var(--text-col);
+    border-radius: 25%;
+    transition: all .5s ease-in-out;
+}
+  
+.nav-btn__burger::before,
+.nav-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 3px;
+  background: var(--text-col);
+  border-radius: 25%;
+  transition: all .5s ease-in-out;
+}
+.nav-btn__burger::before {
+  transform: translateY(-10px);
+}
+.nav-btn__burger::after {
+  transform: translateY(10px);
+}
+
+/* ! ANIMACION */
+.nav-btn.clicked .nav-btn__burger {
+    background: transparent;
+}
+.nav-btn.clicked .nav-btn__burger::before {
+    transform: rotate(45deg);
+}
+.nav-btn.clicked .nav-btn__burger::after {
+    transform: rotate(-45deg);
+}
+/* ! FIN ANIMACION */
+/* ? FIN BOTON BURGER */
+
+.nav__links-container {
+    position: absolute;
+    left: 0;
+    top: calc(2rem + 55px);
+    /* padding: 1em 0; */
+    width: 100%;
+    background-color: #0b0b0bcc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 2em; */
+    transition: all .85s ease-in-out;
+    z-index: 0;
+}
+
+.nav__links-container a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+#contact-btn {
+    background-color: var(--borders-col);
+    color: var(--general-bg-col);
+}
+
+.collapsed {
+    transform: translateY(-300px);
+}
+
+.header-section {
+    margin-top: var(--nav-margin-offset);
+    background-color: var(--general-bg-col);
+    height: calc(100vh - var(--nav-margin-offset));
+    position: relative;
+    background-image: url(../img/perfil.png);
+    background-repeat: no-repeat;    
+    background-size: cover;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: rgba(168, 219, 204, 0.56);
+    clip-path: polygon(-100% 100%, 100% 0%, 100% 100%);
+    /* transition: all .5s ease-in-out; */
+}
+
+.header__titles {
+    position: absolute;
+    bottom: 0;
+    font-size: 3.5vw;
+    padding: 2em 1.5em;
+    padding-left: 4em;
+    font-weight: 600;
+}
+
+.header__titles h4 {
+    text-align: center;
+}
+
+.header__icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1rem 1.5rem;
+}
+
+.header__icons a img{
+    background-color: var(--general-bg-col);
+    padding: .5em;
+    border-radius: 5px;
+}
+
+@media (min-width: 576px) {
+    .header-section {
+        background-size: contain;
+        background-position: bottom right;
+    }
+    .header-section::before{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) { 
+}
+
+@media (min-width: 992px) {
+
+}
+
+/* @media (min-width: 1200px) { ... }
+
+@media (min-width: 1400px) { ... } */
