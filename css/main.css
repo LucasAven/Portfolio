@@ -22,6 +22,8 @@
 html {
     box-sizing: border-box;
     font-family: var(--font-general);
+    scroll-behavior: smooth;
+    scroll-padding-top: 87px;
 }
 
 body {
@@ -632,6 +634,10 @@ footer {
 }
 
 @media (min-width: 992px) {
+    html {
+        scroll-padding-top: 66px;
+    }
+
     .nav-bar {
         flex-flow: row nowrap;
         align-items: center;
