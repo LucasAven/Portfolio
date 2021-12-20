@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://kit.fontawesome.com/d22f7a02d9.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="page-top">
     <!-- NAVBAR -->
     <nav class="nav-bar">
         <div class="nav__responsive-container">
@@ -26,11 +26,11 @@
         </div>
         <div class="nav__links-container collapsed">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre mí</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#" id="contact-btn">CONTACTAR</a></li>
+                <li><a href="#page-top">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact" id="contact-btn">CONTACTAR</a></li>
             </ul>
         </div>
     </nav>
@@ -60,7 +60,7 @@
     </section>
 
     <!-- PERSONAL INFO -->
-    <section class="personal-section">
+    <section class="personal-section" id="about">
         <div class="about-container">
             <h2 class="personal__title">SOBRE MÍ</h2>
             <p>Mi nombre es Lucas Avendaño,  soy un apasionado de la tecnología, el desarrollo web y el diseño de videojuegos. Estoy cursando Ingeniería en Sistemas de Información en la UTN FRLP, de Buenos Aires Argentina. Paralelo a ello, me dedico al desarrollo web como frontend developer tanto freelance como en el proyecto AvenMess del cual soy cofundador.
@@ -68,7 +68,7 @@
             Mi objetivo es poder brindar páginas webs de calidad, seguras y atractivas, y seguir aprendiendo día a día para poder mejorar y adoptar nuevos conocimientos que me permitan abarcar nuevas zonas dentro de este mundo tan variado y en constante cambio que es la programación.
             </p>
         </div>
-        <div class="skills-container">
+        <div class="skills-container" id="skills">
             <h2 class="personal__title">SKILLS</h2>
             <div class="tech-section">
                 <h3>TECNOLOGÍAS:</h3>
@@ -128,7 +128,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio">
         <div class="portfolio__container">
             <h2 class="personal__title">PORTFOLIO</h2>
             <div class="projects-container">
@@ -223,9 +223,37 @@
             </div>
         </div>
     </section>
-    <!-- CONTACTO -->
 
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contact">
+        <div class="contact-wrapper">
+            <h2 class="personal__title">SOBRE MÍ</h2>
+            <div class="contact-container">
+                <div class="contact__data">
+                    <p>Siéntase libre de contactarme por medio del formulario <br> o por alguna de mis otras redes!</p>
+                    <div class="contact__data-links">
+                        <a href="mailto:lucas.avendano.dev@gmail.com" target="_blank"><img src="./img/Mail.svg" alt="Icono Mail">Email</a>
+                        <a href="https://www.linkedin.com/in/lucas-avendano/" target="_blank"><img src="./img/Linkedin.svg" alt="Icono Linkedin">Linkedin</a>
+                        <a href="https://github.com/LucasAven" target="_blank"><img src="./img/GitHub.svg" alt="Icono Github">Github</a>
+                        <a href="https://api.whatsapp.com/send?phone=+5491163068796" target="_blank"><img src="./img/Mask Group.svg" alt="Icono Github">WhatsApp</a>
+                    </div>
+                </div>
+                <form name="contacto-portfolio" method="POST" data-netlify="true">
+                    <input type="text" name="name" placeholder="NOMBRE">
+                    <input type="email" name="email" placeholder="EMAIL">
+                    <textarea name="message" rows="5" placeholder="MENSAJE"></textarea>
+                    <div class="form__btn-container">
+                        <button class="send-btn" type="submit">ENVIAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
     <!-- FOOTER -->
+    <footer>
+        <h4>Copyright © Lucas Avendaño 2021</h4>
+    </footer>
 
     <script src="./js/main.js"></script>
 </body>

@@ -273,10 +273,12 @@ h2 {
 
 .btn-borderless {
     border: 2px solid var(--text-col);
+    background-color: transparent;
     padding: .5em 1em;
     border-top: 0;
     border-bottom: 0;
     transition: all .5s ease-in-out;
+    letter-spacing: 2px;
 }
 
 .btn-borderless:hover {
@@ -425,7 +427,9 @@ h2 {
 }
 
 .card-back__texts h2 {
-    padding-bottom: .5em;    
+    font-family: var(--font-titles);
+    font-weight: 800;
+    padding-bottom: .5em;
 }
 
 .card-back__buttons {
@@ -439,9 +443,125 @@ h2 {
 
 .card-back__buttons a {
     text-decoration: none;
-    background-color: var(--general-bg-col);
+    cursor: pointer;
     padding: 1em 2em;
     border-radius: 5px;
+    transition: all .3s ease-in-out;
+    background-color: var(--general-bg-col);
+    font-family: var(--font-paragraphs);
+}
+
+.card-back__buttons a:hover {
+    transform: scale(1.05);
+    --general-bg-col: hsl(208, 25%, 20%);
+}
+
+/* ? CONTACTO */
+.contact-section {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(92, 92, 92, 0) 0%, rgba(24, 33, 40, 0.16) 100%), #1C2C35;
+    color: var(--text-col);
+}
+
+.contact-wrapper {
+    padding: 4rem;
+    display: flex;
+    margin: auto;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5em;
+    max-width: 1200px;
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.contact__data {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    letter-spacing: 1px;
+}
+
+.contact__data-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 1.5em;
+    place-items: center;
+}
+
+.contact__data-links a {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    font-family: var(--font-paragraphs);
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+form input, form textarea {
+    background: transparent;
+    color: var(--text-col);
+    padding: .5em;
+    border: none;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-left: 2px solid var(--borders-col);
+    border-bottom: 2px solid var(--borders-col);
+}
+
+form textarea {
+    resize: none;
+}
+
+form textarea::placeholder {
+    font-size: 1rem;
+    color: #8B8B8B;
+}
+
+.form__btn-container {
+    padding-top: 1em;
+}
+
+.send-btn {
+    background-color: transparent;
+    border: 2px solid var(--borders-col);
+    border-top: 0;
+    border-bottom: 0;
+    padding: .7em 3.5em;
+    color: var(--borders-col);
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    font-weight: 600;
+}
+
+.send-btn:hover {
+    background-color: var(--borders-col);
+    color: #0b0b0b;
+}
+
+footer {
+    background-color: var(--alt-bg-col);
+    padding: 1em 0;
+    text-align: center;
+    color: var(--text-col);
 }
 
 @media (min-width: 576px) {
@@ -610,7 +730,20 @@ h2 {
 
     .about-container, .skills-container {
         max-width: 800px;
-    }    
+    }
+    /* ?CONTACTO */
+    .contact-container {
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    .contact__data {
+        max-width: 50%;
+    }
+
+    form {
+        width: 50%;
+    }
 }
 
 @media (min-width: 1200px) { 
