@@ -308,6 +308,22 @@ h2 {
     max-width: 540px;
 }
 
+.cv-btn {
+    background-color: hsl(142, 28%, 40%);
+    border-radius: 5px;
+    text-align: center;
+    padding: .7em 3.5em;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.cv-btn:hover {
+    background-color: hsl(142, 28%, 46%);
+}
+
 .personal__title {
     text-align: center;
     border: 2px solid var(--borders-col);
