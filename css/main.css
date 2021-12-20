@@ -566,7 +566,12 @@ footer {
     color: var(--text-col);
 }
 
-@media (min-width: 576px) {
+@media screen and (max-width: 576px) {
+    .personal__title {
+        letter-spacing: .1em;
+    }
+}
+@media screen and (min-width: 576px) {
     .header-section {
         background-size: contain;
         background-position: right var(--nav-margin-offset);
@@ -610,7 +615,7 @@ footer {
     }
 }
 
-@media (min-width: 768px) { 
+@media screen and (min-width: 768px) { 
     .header-section::before {
         clip-path: polygon(-200% 100%, 100% 0%, 100% 100%);
     }
@@ -633,7 +638,7 @@ footer {
     }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     html {
         scroll-padding-top: 66px;
     }
@@ -752,7 +757,7 @@ footer {
     }
 }
 
-@media (min-width: 1200px) { 
+@media screen and (min-width: 1200px) { 
     .header__titles {
         padding-left: 5%;
     }
@@ -779,7 +784,7 @@ footer {
     }
 }
 
-@media (min-width: 1400px) { 
+@media screen and (min-width: 1400px) { 
     .header__titles {
         font-size: 2rem;
     }
