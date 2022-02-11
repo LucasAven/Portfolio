@@ -35,5 +35,6 @@ document.querySelectorAll('a.smooth-scroll[href^="#"]').forEach((anchor) => {
       .querySelector(this.getAttribute("href"))
       .scrollIntoView({ behavior: "smooth" });
     nav_links.classList.toggle("collapsed");
+    nav_toggle.classList.toggle("clicked");
   });
 });
