@@ -5,7 +5,8 @@ const logos = document.querySelectorAll(".logo");
 let lang = localStorage.getItem("lang");
 
 window.onload = () => {
-  if (window.location.pathname === "/") localStorage.setItem("lang", "es");
+  if (window.location.pathname === "/" || window.location.pathname === "/index")
+    localStorage.setItem("lang", "es");
   else localStorage.setItem("lang", "en");
   lang = localStorage.getItem("lang");
   if (lang === "es" && window.location.pathname !== "/")
