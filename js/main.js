@@ -5,14 +5,13 @@ const logos = document.querySelectorAll(".logo");
 let lang = localStorage.getItem("lang");
 
 window.onload = () => {
-  if (window.location.pathname === "/index.html")
-    localStorage.setItem("lang", "es");
+  if (window.location.pathname === "/index") localStorage.setItem("lang", "es");
   else localStorage.setItem("lang", "en");
   lang = localStorage.getItem("lang");
-  if (lang === "es" && window.location.pathname !== "/index.html")
-    window.location.assign("./index.html");
-  if (lang === "en" && window.location.pathname !== "/index_EN.html")
-    window.location.assign("./index_EN.html");
+  if (lang === "es" && window.location.pathname !== "/index")
+    window.location.assign("./index");
+  if (lang === "en" && window.location.pathname !== "/index_EN")
+    window.location.assign("./index_EN");
 };
 
 nav_toggle.addEventListener("click", (e) => {
