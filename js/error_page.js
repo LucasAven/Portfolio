@@ -75,7 +75,7 @@ const lang = localStorage.getItem("lang");
 const homeLink = document.querySelector("#home-link");
 if (lang) {
   if (lang === "es") {
-    homeLink.setAttribute("href", "./index.html");
+    homeLink.setAttribute("href", "./index");
     homeLink.textContent = "Volver al Inicio";
   }
   if (lang === "en") {
