@@ -71,3 +71,15 @@ window.onload = function () {
 
   onSVGLoaded();
 };
+const lang = localStorage.getItem("lang");
+const homeLink = document.querySelector("#home-link");
+if (lang) {
+  if (lang === "es") {
+    homeLink.setAttribute("href", "./index.html");
+    homeLink.textContent = "Volver al Inicio";
+  }
+  if (lang === "en") {
+    homeLink.setAttribute("href", "./index_EN.html");
+    homeLink.textContent = "Go Back Home Page";
+  }
+}

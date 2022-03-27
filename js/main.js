@@ -2,6 +2,19 @@ const nav_toggle = document.querySelector(".nav-btn");
 const nav_links = document.querySelector(".nav__links-container");
 const nav = document.querySelector(".nav-bar");
 const logos = document.querySelectorAll(".logo");
+let lang = localStorage.getItem("lang");
+
+window.onload = () => {
+  if (window.location.pathname === "/index.html")
+    localStorage.setItem("lang", "es");
+  else localStorage.setItem("lang", "en");
+  lang = localStorage.getItem("lang");
+  if (lang === "es" && window.location.pathname !== "/index.html")
+    window.location.assign("./index.html");
+  if (lang === "en" && window.location.pathname !== "/index_EN.html")
+    window.location.assign("./index_EN.html");
+};
+
 nav_toggle.addEventListener("click", (e) => {
   e.preventDefault();
   nav_links.classList.toggle("collapsed");
