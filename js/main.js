@@ -10,8 +10,8 @@ window.onload = () => {
   lang = localStorage.getItem("lang");
   if (lang === "es" && window.location.pathname !== "/index")
     window.location.assign("./index");
-  if (lang === "en" && window.location.pathname !== "/index_EN")
-    window.location.assign("./index_EN");
+  if (lang === "en" && window.location.pathname !== "/index_en")
+    window.location.assign("./index_en");
 };
 
 nav_toggle.addEventListener("click", (e) => {
