@@ -2,22 +2,17 @@ const nav_toggle = document.querySelector(".nav-btn");
 const nav_links = document.querySelector(".nav__links-container");
 const nav = document.querySelector(".nav-bar");
 const logos = document.querySelectorAll(".logo");
+const langES_ID = document.querySelector("#es");
+const langEN_ID = document.querySelector("#en");
 let lang = localStorage.getItem("lang");
 
-// window.onload = () => {
-//   if (
-//     window.location.pathname === "/" ||
-//     window.location.pathname === "/index.html"
-//   )
-//     localStorage.setItem("lang", "es");
-//   else localStorage.setItem("lang", "en");
-//   lang = localStorage.getItem("lang");
-//   if (
-//     (lang === "es" && window.location.pathname !== "/"))
-//     window.location.assign("./");
-//   if (lang === "en" && window.location.pathname !== "/index_en")
-//     window.location.assign("./index_en");
-// };
+window.onload = () => {
+  if (langES_ID !== null) localStorage.setItem("lang", "es");
+  if (langEN_ID !== null) localStorage.setItem("lang", "en");
+  lang = localStorage.getItem("lang");
+  if (lang === "es" && langES_ID === null) window.location.assign("./");
+  if (lang === "en" && langEN_ID === null) window.location.assign("./index_en");
+};
 
 nav_toggle.addEventListener("click", (e) => {
   e.preventDefault();
