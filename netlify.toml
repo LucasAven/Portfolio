@@ -15,7 +15,7 @@
     to = "/index_EN.html"
     status = 200
     force = true
-    conditions = {Language = ["en"], Country = ["US"]}
+    conditions = {Country = ["US"]}
 
 [build.processing]
   skip_processing = false
@@ -27,6 +27,6 @@
 [build.processing.js]
   bundle = true
   minify = false
-  
+
 [build.processing.html]
   pretty_urls = true
