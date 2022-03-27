@@ -4,9 +4,16 @@
     status = 200
 
 [[redirects]]
-    from = "/*"
+    from = "/"
     to = "/index_EN.html"
-    status = 200
+    status = 302
+    force = true
+    conditions = {Language = ["en"], Country = ["US"]}
+
+[[redirects]]
+    from = "/index.html"
+    to = "/index_EN.html"
+    status = 302
     force = true
     conditions = {Language = ["en"], Country = ["US"]}
 
@@ -20,6 +27,6 @@
 [build.processing.js]
   bundle = true
   minify = false
-
+  
 [build.processing.html]
   pretty_urls = true
