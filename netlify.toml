@@ -1,0 +1,32 @@
+[[redirects]]
+    from = "/*"
+    to = "/404.html"
+    status = 200
+
+[[redirects]]
+    from = "/"
+    to = "/index_EN.html"
+    status = 200
+    force = true
+    conditions = {Language = ["en"], Country = ["US"]}
+
+[[redirects]]
+    from = "/index.html"
+    to = "/index_EN.html"
+    status = 200
+    force = true
+    conditions = {Language = ["en"], Country = ["US"]}
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = false
+
+[build.processing.js]
+  bundle = true
+  minify = false
+  
+[build.processing.html]
+  pretty_urls = true
