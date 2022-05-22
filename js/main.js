@@ -5,6 +5,7 @@ const logos = document.querySelectorAll(".logo");
 const langES_ID = document.querySelector("#es");
 const langEN_ID = document.querySelector("#en");
 let lang = localStorage.getItem("lang");
+const footer_text = document.querySelector(".footer__text");
 
 window.onload = () => {
   if (langES_ID !== null) localStorage.setItem("lang", "es");
@@ -50,3 +51,5 @@ document.querySelectorAll('a.smooth-scroll[href^="#"]').forEach((anchor) => {
     nav_toggle.classList.toggle("clicked");
   });
 });
+
+footer_text.innerHTML = footer_text.innerHTML + " " + new Date().getFullYear();
