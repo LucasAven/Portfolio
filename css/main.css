@@ -938,6 +938,16 @@ form textarea::placeholder {
   font-size: 1rem;
   color: #8b8b8b;
 }
+form textarea::-webkit-scrollbar {
+  width: 0.25em;
+}
+form textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+form textarea::-webkit-scrollbar-thumb {
+  background-color: var(--borders-col);
+}
 .form__btn-container {
   padding-top: 1em;
 }
