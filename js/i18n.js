@@ -78,6 +78,8 @@ const I18N = {
 		"proj.repo": "Repositorio",
 		"p.portfolio.desc":
 			"El sitio que estás viendo. Diseño editorial bilingüe (ES/EN) construido con Tailwind CSS v4 y JavaScript vanilla, con animaciones al hacer scroll, parallax y microinteracciones.",
+		"p.mariadelia.desc":
+			"E-commerce artesanal para guardapolvos personalizables hechos a mano. Construido con React 19, TypeScript, Vite y Tailwind CSS v4, integrado con Sveltia CMS para la gestión de contenido y pedidos por WhatsApp.",
 		"p.cranck.desc":
 			"Sitio diseñado con WordPress y Elementor. Información del comercio con un menú simple y claro.",
 		"p.ip.desc":
@@ -182,6 +184,8 @@ const I18N = {
 		"proj.repo": "Repository",
 		"p.portfolio.desc":
 			"The site you're looking at. A bilingual (ES/EN) editorial design built with Tailwind CSS v4 and vanilla JavaScript, featuring scroll animations, parallax and micro-interactions.",
+		"p.mariadelia.desc":
+			"An artisanal e-commerce for custom handmade smocks. Built with React 19, TypeScript, Vite and Tailwind CSS v4, integrated with Sveltia CMS for content management and WhatsApp-based ordering.",
 		"p.cranck.desc":
 			"Built with WordPress and Elementor. Business info with a simple, clear menu.",
 		"p.ip.desc":
