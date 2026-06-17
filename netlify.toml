@@ -5,6 +5,9 @@
   command = "npm run build:css"
   publish = "."
 
+[build.environment]
+  NODE_VERSION = "20"
+
 [[redirects]]
     from = "/*"
     to = "/404.html"
